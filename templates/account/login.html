@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Log in {% endblock %}
+
+{% block content %}
+
+<div class="container mt-4" style=" width: 30rem;">
+    <div class="card rounded p-2">
+        <h1 class="bold text-danger text-center">Log In</h1>
+    <p class="text-center text-primary">
+        Please, use the following form to log in:
+    </p>
+    <form method="post" class="text-center">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log in"></p>
+    </form>
+    </div>
+</div>
+
+{% endblock %}
